@@ -20,6 +20,7 @@ defmodule NewRelicPhoenix.Mixfile do
   defp deps do
     [
       {:newrelic, "~> 0.1.0", runtime: false},
+      {:phoenix, "~> 1.2.3"}
     ]
   end
 
