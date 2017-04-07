@@ -17,10 +17,10 @@ defmodule NewRelicPhoenix.Application do
     :ok = :statman_server.add_subscriber(:statman_aggregator)
 
     if app_name() && license_key() do
-      Application.put_env(:newrelic, :application_name, to_char_list(app_name()))
-      Application.put_env(:newrelic, :license_key, to_char_list(license_key()))
+      Application.put_env(:newrelic_erl, :application_name, to_char_list(app_name()))
+      Application.put_env(:newrelic_erl, :license_key, to_char_list(license_key()))
 
-      {:ok, _} = :newrelic_poller.start_link(&:newrelic_statman.poll/0)
+      {:ok, _} = :newrelic_erl_poller.start_link(&:newrelic_erl_statman.poll/0)
     end
 
     result

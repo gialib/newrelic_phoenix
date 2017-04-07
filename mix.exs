@@ -19,7 +19,7 @@ defmodule NewRelicPhoenix.Mixfile do
 
   defp deps do
     [
-      {:newrelic, "~> 0.1.0", runtime: false},
+      {:newrelic_erl, github: "gialib/newrelic_erl", runtime: false},
       {:phoenix, "~> 1.2.3"}
     ]
   end
@@ -28,7 +28,7 @@ defmodule NewRelicPhoenix.Mixfile do
     [
       licenses: ["MIT"],
       links: %{
-        "GitHub" => "https://github.com/ello/newrelic_phoenix"
+        "GitHub" => "https://github.com/gialib/newrelic_phoenix"
       },
     ]
   end
